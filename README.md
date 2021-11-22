@@ -1,12 +1,12 @@
 # Amazon Chime SDK PSTN Lex Demo
 
-This repo derived from a [basic template for a Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk). 
+This repo is derived from a [basic template for a Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk). 
 
 ## What does it Do?
 
-This deploys an AWS allocated Phone Number and attaches a simple IVR application that is integrated to [Amazon Lex](https://aws.amazon.com/lex/).  
+This deploys an AWS allocated Phone Number and attaches a simple IVR application that is integrated wit [Amazon Lex](https://aws.amazon.com/lex/).  
 
-As a prerequisite, you must first set up a Lex (v1) 'Flower Demo' bot in the AWS console for your account.  Ensure you use Lex v1.  The name of your bot should be named 'OrderFlowers' and you should create an alias to it called 'PROD' in order for the code to work as configured.  Detailed instructions for setting up that bot are [here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/blob/main/SETUP-LEX.md).
+As a prerequisite, you must first set up a Lex (v1) 'Flower Demo' bot in the AWS console for your account (Ensure you use Lex v1).  The name of your bot should be 'OrderFlowers' and you should create an alias to it called 'PROD' in order for the code to work as configured.  Detailed instructions for setting up that bot are [here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/blob/main/SETUP-LEX.md).
 
 When you call the phone number created by this application the caller is prompted to answer a series of questions to order flowers from a fictitious "Flower Store," all using only voice prompts.
 
@@ -23,15 +23,19 @@ You should get information about your valid AWS account.
 ## Installing Application Dependencies
 
 On a clean linux instance, you need to install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), [jq](https://stedolan.github.io/jq/download/) and 
-the [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm).  You can then use nvm to install the other dependendencies (nodejs typescript aws-sdk aws-cdk).  An example of the commands
-to install on Amazon Linux (or other yum-based linux) is [here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/SETUP-DEPS.md).  
+the [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm).  You can then use nvm to install the other dependendencies (nodejs typescript aws-sdk aws-cdk).
 
 An example of the commands to install on Amazon Linux (or other yum-based linux) is [here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/SETUP-DEPS.md).  However, please
-always reference those tools instalation instructions if needed.
+always reference those tools installation instructions if needed.
 ## Batteries Included, Just Show Me Already!
 
-Once you have set up the Amazon Lex bot and installed the dependencies, if you just want to go for it you can run the "deploy.sh" script.  It will call the make commands to deploy the sample app.  It's output will 
-include the application telephone number.
+Once you have set up the Amazon Lex bot and installed the dependencies, if you just want to go for it you can run the ```deploy.sh``` script.  It will call the make commands to deploy the sample app.  It's output will 
+include the application telephone number:
+
+```bash
+./deploy.sh
+```
+
 ## Output
 
 This application includes full deployment automation using the AWS CDK.  When you deploy it, all needed resources will be created in your AWS account.  When the script completes 
@@ -59,7 +63,7 @@ Stack ARN:
 arn:aws:cloudformation:us-west-2:497939524935:stack/ChimeSdkPstnCdkLexDemo/f8298a50-48c2-11ec-84f8-02b5c6242747
 ```
 
-All you need is the phone number on the line "chimeSdkPstnCdkStack.inboundPhoneNumber."  Call that number and the app will respond.
+All you need is the phone number on the line "ChimeSdkPstnCdkStack.inboundPhoneNumber."  Call that number and the app will respond.
 
 ## How Does it Work?
 
@@ -88,7 +92,7 @@ more information on the tooling](https://github.com/aws-samples/amazon-chime-sdk
 
 Deploying the Amazon Chime SDK demo application contained in this repository will cause your AWS Account to be billed for services, including the Amazon Chime SDK, used by the application.
 
-Please be aware that Amazon Lex will use the recorded audio provided to it to improve it's service.  You can disable this by selecting "No" for Advanced Options.  For more information, read 
+Please be aware that Amazon Lex will use the recorded audio provided to it to improve its service.  You can disable this by selecting "No" for Advanced Options.  For more information, read 
 ["AI services opt-out policies"](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html).
 
 The recordings created in this demo are not encrypted, as would be recommended in a production-grade application.  
