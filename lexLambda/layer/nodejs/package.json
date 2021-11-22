@@ -1,0 +1,20 @@
+{
+  "name": "SampleLexSmaApp",
+  "version": "0.1.0",
+  "description": "Sample Lex SMA Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-chime": "3.41.0",
+    "@aws-sdk/client-lex-runtime-service": "3.39.0",
+    "@aws-sdk/client-lex-runtime-v2": "3.39.0",
+    "aws-sdk": "2.1021.0"
+  },
+  "devDependencies": {
+    "@aws-sdk/types": "^3.1.0"
+  }
+}
