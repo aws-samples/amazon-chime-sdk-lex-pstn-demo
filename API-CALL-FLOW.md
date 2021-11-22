@@ -1,15 +1,15 @@
 # Simplified API Call Flow
 
 This solution uses a single Phone Number, SIP Media Appliance (SMA) and SIP Rule as well as two lambda functions.  It also uses Amazon Polly to generate voice
-prompts and Amazon Lex to interpret caller requests.  Recordings of caller requests and system audio responses are stored on an Amazon S3 bucket in the account.
+prompts and Amazon Lex to interpret caller requests.  Recordings of caller requests and system audio responses are stored in an Amazon S3 bucket in the account.
 
 The basic sequence of API operations is shown below:
 
 ![](images/callflow.drawio.svg?raw=true)
 
 When a caller dials the application phone number the SMA will send a NEW_INBOUND_CALL message to the application lambda function.  That function will create a welcome
-message string and make an API call to Amazon Polly to generate a voice prompt.  That voice prompt will be a recording stored on an account S3 bucket.  The lambda
-will then reply to the SMA will instructions to do two things:  play the voice prompt audio file, and record the callers response.  In the code the period of silence
+message string and make an API call to Amazon Polly to generate a voice prompt.  That voice prompt will be a recording stored in an account S3 bucket.  The lambda
+will then reply to the SMA with instructions to do two things:  play the voice prompt audio file, and record the callers response.  In the code the period of silence
 at the end of the caller speaking is set to 2 seconds and the level of background noise is set to 200.  The maximum period of the recording will be 15 seconds. These are set 
 in src/index.js as follows:
 
@@ -35,6 +35,6 @@ in the call to the SMA.
 The SMA then makes a CALL_UPDATE_REQUESTED call to the application lambda with the details provided in the UpdateSipMediaApplication call.  The SMA then repeats
 the same sequence, collecting data for each slot in the Lex Bot.  If the 'endFlag' is set then the lambda plays a final goodbye recording and hangs up.
 
-Please be aware that for the sake of brevity one SMA call to the application lambda was ommitted.  When the masking audio playback is interupted as a result of 
+Please be aware that for the sake of brevity one SMA call to the application lambda was omitted.  When the masking audio playback is interupted as a result of 
 the SMA receiving the UpdateSipMediaApplication call the SMA will send an ACTION_INTERRUPTED call to the lambda.  In this demo the lambda just ignores that call.
 More sophisticated applications, however, could make use of that information to perhaps take a different action or generate necessary logs.

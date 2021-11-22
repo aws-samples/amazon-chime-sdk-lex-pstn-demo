@@ -29,7 +29,7 @@ An example of the commands to install on Amazon Linux (or other yum-based linux)
 always reference those tools installation instructions if needed.
 ## Batteries Included, Just Show Me Already!
 
-Once you have set up the Amazon Lex bot and installed the dependencies, if you just want to go for it you can run the ```deploy.sh``` script.  It will call the make commands to deploy the sample app.  It's output will 
+Once you have set up the Amazon Lex bot and installed the dependencies, if you just want to go for it you can run the ```deploy.sh``` script.  It will call the make commands to deploy the sample app.  Its output will
 include the application telephone number:
 
 ```bash

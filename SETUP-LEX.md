@@ -20,17 +20,19 @@ You will be prompted to enter an Alias.  Enter "PROD" (in all caps).
 
 Then click "Publish" and your bot will be available in a few moments.
 
-If you named your bot OrderFlowers and set the alias to PROD then you won't have to make any changes to the source code of the Chime SDK demo.
+If you named your bot OrderFlowers, set the language to be English (US) and set the alias to PROD then you won't have to make any changes to the source code of the Chime SDK demo.
 
 ##  Different Bot Name or Alias Name
 
-If you use a different name or alias name, you will need to edit the file lexLambda/index.js to match the names you chose.
+If you use a different name, language or alias name, you will need to edit the file lexLambda/index.js to match the names you chose:
 
 ```typescript
 / change these to match your Lex bot
 const lexBotName = 'OrderFlowers';  // change here
 const lexBotAlias = 'PROD';         // change here
 ```
+
+Note: choosing another language will add a suffix to the bot name, e.g. "OrderFlowers_en_GB" if English (UK) is chosen.
 
 # Disclaimer
 
