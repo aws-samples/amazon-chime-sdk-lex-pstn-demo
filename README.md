@@ -30,7 +30,7 @@ You should get information about your AWS account if it's set up properly.
 On a clean linux instance, you need to install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), [jq](https://stedolan.github.io/jq/download/) and 
 the [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm).  You can then use nvm to install the other dependendencies (nodejs typescript aws-sdk aws-cdk).
 
-An example of the commands to install on Amazon Linux (or other yum-based linux) is [here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/SETUP-DEPS.md).  However, please
+An example of the commands to install on Amazon Linux (or other yum-based linux) is [here](SETUP-DEPS.md).  However, please
 always reference those tools installation instructions if needed.
 
 ## Configuration of Amazon Lex (V1)
