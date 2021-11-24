@@ -4,7 +4,7 @@ The Amazon Chime SDK Public Switched Telephone Network (PSTN) Audio service make
 
 This demo will teach you how to build a conversational interactive voice response (IVR) system for a fictitious flower store that accepts orders over the phone. The voice application we build supports automatic speech recognition (ASR) and natural language understanding (NLU) using Amazon Lex, the same proven technology that powers Alexa.  This example voice application is implemented as AWS Lambda functions written in JavaScript.
 
-This project is derived from a [basic template for a Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk). 
+This project is derived from a [basic template for an Amazon Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk). 
 ## What does it Do?
 
 This deploys an Phone Number allocated by the Amazon Chime SDK PSTN Audio service and attaches it to a simple IVR application that is integrated with [Amazon Lex](https://aws.amazon.com/lex/).  
@@ -95,7 +95,7 @@ This will replace the name in the application with the new stack name.
 
 ## Details and In-Depth Instructions
 
-Since this project is derived from [basic template for a Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk) you can refer to that project for [much
+Since this project is derived from [basic template for an Amazon Chime SDK PSTN application](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk) you can refer to that project for [much
 more information on the tooling](https://github.com/aws-samples/amazon-chime-sdk-pstn-cdk#details-and-in-depth-instructions) provided by that sample app.  
 
 ## Cleanup
@@ -117,6 +117,8 @@ Please be aware that Amazon Lex will use the recorded audio provided to it to im
 ["AI services opt-out policies"](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html).
 
 The recordings created in this demo are not encrypted, as would be recommended in a production-grade application.  
+
+You and your end users understand that recording Amazon Chime SDK audio with this feature may be subject to laws or regulations regarding the recording of electronic communications, and that it is your and your end users’ responsibility to comply with all applicable laws regarding the recording, including properly notifying all participants in a recorded session or to a recorded communication that the session or communication is being recorded and obtain their consent.
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
