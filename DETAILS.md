@@ -26,7 +26,7 @@ The custom provider currently only supports the creation of one Phone Number, on
 The sample app is in the 'src' directory.  If you call it's Phone Number it will detect the number you called from.  If it recoginized the number, it will say "welcome back" and if
 it does not recognize the number it will read back the number you are calling from.  It then speaks the time (in UCT) and says goodbye and hangs up.
 
-Read more about the [API call flow here](https://github.com/aws-samples/amazon-chime-sdk-lex-pstn-demo/blob/main/API-CALL-FLOW.md). 
+Read more about the [API call flow here](API-CALL-FLOW.md). 
 
 The code is in src/index.js.  This demo shows how to answer the phone, use Amazon Polly to create voice prompts and play them back over an Amazon Chime SDK SIP Media Appliance (SMA).
 The app is writte in javascript.  The CDK code is in typescript.  To prevent the CDK from trying to treat the app code as typescript it's folder is specifically excluded 
