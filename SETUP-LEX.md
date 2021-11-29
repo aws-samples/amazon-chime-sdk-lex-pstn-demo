@@ -6,7 +6,7 @@ value for the Confidence Score Threshold.
 
 ![](images/flowerstorebot.png?raw=true)
 
-NOTE:  Amazon Lex will use the recorded audio provided to it to improve it's service.  You can disable this by selecting "No" for Advanced Options.  For more information, read 
+By default, Amazon Lex stores and uses voice inputs that it has processed for the purpose of  developing and improving the service (for information, visit the AWS Service Terms for AWS Machine Learning and Artificial Intelligence Services). Amazon Lex enables customers to opt out from having content stored and used for these purposes. For this demo, please opt out from having your content stored and used by Amazon Lex by selecting "No" for Advanced Options.  For more information, read 
 ["AI services opt-out policies"](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_ai-opt-out.html)
 
 When you have entered all the values, click the Create button.
