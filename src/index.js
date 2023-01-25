@@ -319,34 +319,6 @@ async function synthesizeSpeech(s3Bucket, s3Key, text, textType, voiceID, langua
 };
 
 
-async function synthesizeWelcomeSpeech(phrase, s3Key) {
-  console.log("phrase: ", phrase, " s3Key: ", s3Key);
-
-  let audioBuffer = '';
-  let audioBuffer2 = '';
-
-  try {
-    audioBuffer = await synthesizeSpeechInternal(phrase, 'ssml', 'Joanna', 'en-US');
-  } catch (error) {
-    console.log(error);
-    return null;
-  }
-  if (audioBuffer) {
-    try {
-      audioBuffer2 = await addWaveHeaderAndUploadToS3(audioBuffer, wavFileBucket, s3Key);
-    } catch (error) {
-      console.log(error);
-      return null;
-    }
-  } else { return null; }
-
-  if (audioBuffer2) {
-    return audioBuffer2;
-  }
-  return null;
-};
-
-
 function pad(num, size) {
   num = num.toString();
   while (num.length < size) num = "0" + num;
